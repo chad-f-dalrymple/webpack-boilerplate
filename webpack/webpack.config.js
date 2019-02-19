@@ -9,8 +9,11 @@ module.exports = {
   context: path.resolve(__dirname, '../src'),
   entry: {
     app: ['./index.js'],
+    secondary: ['./secondary.js']
   },
   output: {
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist')
   },
   devServer: {
@@ -19,6 +22,11 @@ module.exports = {
     port: 8080,
     stats: {
       children: false
+    }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
     }
   },
   module: {
