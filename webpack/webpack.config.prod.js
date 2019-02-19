@@ -5,9 +5,9 @@ const path = require('path');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const merge = require('webpack-merge');
 
-const webpackConfigBase = require('./webpack.config.dev.js/index.js');
+const webpackConfigDev = require('./webpack.config.dev.js/index.js');
 
-module.exports = merge(webpackConfigBase, {
+module.exports = merge(webpackConfigDev, {
   output: {
     filename: '[name].[hash:8].js'
   },
