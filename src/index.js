@@ -1,25 +1,10 @@
-import _ from 'lodash';
-import printMe from './print.js';
+require('./scss/app.scss');
 
-function component() {
-  var element = document.createElement('div');
-  var btn = document.createElement('button');
+// import the rest of the scss
+// require.context('./scss/', true, /\.scss$/);
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+// do something
+console.log('test');
 
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-  return element;
-}
-
-document.body.appendChild(component());
-
-if (module.hot) {
-  module.hot.accept('./print.js', function() {
-    console.log('Accepting the updated printMe module!');
-    printMe();
-  })
-}
+// make sure jquery works
+$('#page-title').text('jQuery is working');
