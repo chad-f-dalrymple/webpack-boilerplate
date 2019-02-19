@@ -4,13 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config ./webpack/webpack.config.js          --mode production",
+    "build": "webpack --config ./webpack/webpack.config.prod.js --mode production",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server --config ./webpack/webpack.config.js --mode development"
+    "dev": "webpack-dev-server --config ./webpack/webpack.config.dev.js --mode development"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/core": "^7.3.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "assets-webpack-plugin": "^3.9.7",
@@ -38,6 +38,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "chunk-rename-webpack-plugin": "^1.1.1",
     "jquery": "^3.3.1"
   }
 }

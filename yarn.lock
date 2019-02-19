@@ -1471,6 +1471,11 @@ chrome-trace-event@^1.0.0:
   dependencies:
     tslib "^1.9.0"
 
+chunk-rename-webpack-plugin@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/chunk-rename-webpack-plugin/-/chunk-rename-webpack-plugin-1.1.1.tgz#4205c2539e90598639e0ff993b26e49b7c9165b2"
+  integrity sha1-QgXCU56QWYY54P+ZOybkm3yRZbI=
+
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"

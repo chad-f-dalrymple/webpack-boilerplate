@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ChunkRenamePlugin = require("chunk-rename-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -78,6 +79,10 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   plugins: [
+    new ChunkRenamePlugin({
+      app: 'app.js',
+      secondary: 'secondary.js'
+    }),
     new CleanWebpackPlugin(['dist']),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -87,9 +92,5 @@ module.exports = {
       template: path.resolve(__dirname, '../src/html/index.html'),
       filename: 'index.html'
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
-    })
   ]
 };
