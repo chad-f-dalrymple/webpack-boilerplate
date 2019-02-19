@@ -88,6 +88,10 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery'
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css'
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/html/index.html'),
       filename: 'index.html'

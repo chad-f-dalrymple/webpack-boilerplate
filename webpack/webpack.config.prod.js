@@ -5,7 +5,7 @@ const path = require('path');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const merge = require('webpack-merge');
 
-const webpackConfigDev = require('./webpack.config.dev.js/index.js');
+const webpackConfigDev = require('./webpack.config.dev.js');
 
 module.exports = merge(webpackConfigDev, {
   output: {
